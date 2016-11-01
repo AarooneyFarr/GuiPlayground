@@ -13,5 +13,6 @@ public class GuiFirstPanel extends JPanel
 		super();
 		this.baseController = baseController;
 		
+		
 	}
 }
