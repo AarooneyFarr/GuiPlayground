@@ -23,10 +23,18 @@ public class GuiFirstPanel extends JPanel
 		colorButton = new JButton("color");
 		randomButton = new JButton("random");
 		baseLayout = new SpringLayout();
+		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, -200, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, randomButton, -184, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, colorButton, 200, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.WEST, colorButton, 200, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, randomButton, -171, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, randomButton, -108, SpringLayout.EAST, this);
 		
+	
+		
+		setupListeners();
 		setupPanel();
 		setupLayout();
-		setupListeners();
 
 	}
 
@@ -41,9 +49,16 @@ public class GuiFirstPanel extends JPanel
 
 	private void setupLayout()
 	{
-		baseLayout.putConstraint(SpringLayout.NORTH, colorButton, 0, SpringLayout.NORTH, randomButton);
-		baseLayout.putConstraint(SpringLayout.WEST, colorButton, 45, SpringLayout.EAST, randomButton);
-
+		
+		
+	}
+	
+	private void randomBackground()
+	{
+		int red = (int) (Math.random() * 256);
+		int green = (int) (Math.random() * 256);
+		int blue = (int) (Math.random() * 256);
+		this.setBackground(new Color(red, green, blue));
 	}
 
 	private void setupListeners()
@@ -60,7 +75,7 @@ public class GuiFirstPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				setBackground(Color.RED);
+				randomBackground();
 			}
 		});
 	}

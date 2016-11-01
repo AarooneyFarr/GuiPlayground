@@ -22,7 +22,7 @@ public class GuiFirstFrame extends JFrame
 	{
 		this.setContentPane(appPanel);
 		this.setTitle("WOW A Window!");
-		this.setSize(new Dimension(400,400));
+		this.setSize(new Dimension(800,800));
 		this.setVisible(true);
 		
 	}
