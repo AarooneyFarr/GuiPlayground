@@ -1,6 +1,8 @@
 package gui.view;
 
-public class GuiFirstPanel
-{
 
+
+public class GuiFirstPanel extends JFrame
+{
+	
 }
