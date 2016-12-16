@@ -26,4 +26,9 @@ public class GuiFirstFrame extends JFrame
 		this.setVisible(true);
 		
 	}
+	
+	public GuiController getBaseController()
+	{
+		return baseController;
+	}
 }
